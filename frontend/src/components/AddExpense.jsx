@@ -1,7 +1,4 @@
 import { useState } from 'react';
-import axios from 'axios';
-
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
 function AddExpense({ onExpenseAdded }) {
   const [formData, setFormData] = useState({
@@ -42,13 +39,7 @@ function AddExpense({ onExpenseAdded }) {
         description: formData.description,
       };
 
-      const response = await axios.post(`${API_URL}/api/expenses`, expenseData, {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-
-      await onExpenseAdded(response.data);
+      await onExpenseAdded(expenseData);
 
       setFormData({
         category: '',
@@ -56,7 +47,7 @@ function AddExpense({ onExpenseAdded }) {
         description: '',
       });
     } catch (err) {
-      setError(err.response?.data?.message || err.message || 'Failed to add expense');
+      setError(err.message || 'Failed to add expense');
     } finally {
       setLoading(false);
     }
