@@ -6,7 +6,7 @@ import AddExpense from './components/AddExpense';
 import EditExpense from './components/EditExpense';
 import ExpenseList from './components/ExpenseList';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+const API_URL = import.meta.env.VITE_API_URL || 'https://expense-tracker-mern-full-stack-project.onrender.com';
 
 function App() {
   const [expenses, setExpenses] = useState([]);
