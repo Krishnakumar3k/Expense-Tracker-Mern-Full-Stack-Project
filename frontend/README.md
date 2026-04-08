@@ -11,6 +11,9 @@ A full-stack expense tracking application built with MongoDB, Express.js, React.
 - Clean MVC architecture on the backend
 - Real-time updates without page reload
 
+- live host link : VITE_API_URL=https://expense-tracker-mern-full-stack-project.onrender.com
+- Local host link :
+
 ## Tech Stack
 
 **Frontend:**
@@ -162,5 +165,3 @@ The built files will be in the `dist/` directory.
 - Ensure the backend server is running
 
 ## License
-
-MIT
