@@ -1,5 +1,5 @@
 import Expense from '../models/Expense.js';
-
+// Krishna ---------------------------------
 export const getAllExpenses = async (req, res) => {
   try {
     const expenses = await Expense.find().sort({ createdAt: -1 });
